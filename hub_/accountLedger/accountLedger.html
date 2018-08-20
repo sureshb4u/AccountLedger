@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Ledger</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/webresources/hub_/accountLedger/css/bootstrap_3.min.css">
+    <link rel="stylesheet" type="text/css" href="/webresources/hub_/accountLedger/css/style.css">
+</head>
+<body>
+    <div class="loading">
+        <img class="load-img" src="/webresources/hub_/calendar/images/loading.gif">
+    </div>
+    <div class="container" >
+        <div class="row">
+            <div>
+                <h4>Account Ledger</h4>
+                <div class="customerName"></div>
+                <h3>General</h3>
+                <div class="row">
+                    <div class="generalDetails col-sm-4">
+                    </div>
+                    <div class="endOfPeriod bold col-sm-2"></div>
+                    <div class="col-sm-offset-3 ta-right pr15 paymentDetails">                        
+                        <button type="button" class="btn btn-primary btn-md exportBtn">
+                            <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Export
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row contentDiv">
+            <h3>Transactions</h3>
+            <div>
+                <span>Show <input class="pageSize" type="text" value="25"/>  transactions per page. </span>
+                <span class="pl15"> Show ALL <input class="showAll" type="checkbox" /></span>
+                <span class="pl15"> Payments <input id="pckgFilter" class="filter" type="checkbox" checked="checked"/></span>
+                <span class="pl15"> Charges  <input id="chargeFilter" class="filter" type="checkbox"  checked="checked"/></span>
+                <span class="pl15"> Credits <input id="creditFilter" class="filter" type="checkbox"  checked="checked"/></span>
+            </div>
+            <table class="table table-hover table-bordered mt20" id="transactionList">
+                <thead>
+                    <tr>
+                        <td>Transaction Date</td>
+                        <td>Name</td>
+                        <td>Bill/Master Payment/Payment Agrement</td>
+                        <td>Type</td>
+                        <td>Debits</td>
+                        <td>Credits</td>
+                    </tr>
+                </thead>
+                <tbody class="">
+
+                </tbody>
+            </table>
+            <nav>
+                <span>
+                    <img class="load-img linear-loader" src="/webresources/hub_/calendar/images/loading.gif">
+                </span>
+                <span class="pageIndicator"></span>
+                <ul class="pager">
+                    <li class="previous disabled"><a class="prev"><span aria-hidden="true">&larr;</span> Prev</a></li>
+                    <li class="next disabled"><a class="next">Next <span aria-hidden="true">&rarr;</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script src="/webresources/hub_/accountLedger/js/jquery_1.9.0.min.js"></script>
+    <script type="text/javascript" src="/webresources/hub_/accountLedger/js/bootstrap_3.min.js"></script>
+    <script src="/webresources/hub_/accountLedger/js/accountLedgerView.js"></script>
+    <script src="/webresources/hub_/accountLedger/js/accountLedgerUI.js"></script>
+</body>
+</html>

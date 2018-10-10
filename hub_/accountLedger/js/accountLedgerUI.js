@@ -1,4 +1,4 @@
-﻿var data = new Data();
+var data = new Data();
 var wjQuery = jQuery.noConflict();
 
 setTimeout(function () {
@@ -46,6 +46,10 @@ function AccountLedger() {
     this.getAccountInfo = function (pageSelected,from,size,filter) {
         var self = this;
         var noOfRows = wjQuery("#transactionList tbody tr").length;
+        var showAll = wjQuery(".showAll");
+        if (showAll[0].checked) {
+            size = 100;
+        }
         if (pageSelected == "prev") {
             dataDisplayed -= noOfRows;
         }
